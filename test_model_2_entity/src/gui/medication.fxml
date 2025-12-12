@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" >
+   <children>
+      <TableView fx:id="medicationTable" prefHeight="200.0" prefWidth="374.0">
+        <columns>
+          <TableColumn fx:id="categoryColumn" prefWidth="89.5" text="Category" />
+          <TableColumn fx:id="nameColumn" prefWidth="71.5" text="Name" />
+            <TableColumn fx:id="sideEffectsColumn" prefWidth="212.0" text="Side Effects" />
+        </columns>
+      </TableView>
+      <ListView fx:id="sideEffectsListView" layoutY="200.0" prefHeight="200.0" prefWidth="374.0" />
+      <TextField fx:id="nameTextField" layoutX="404.0" layoutY="55.0" onKeyTyped="#nameChanged" />
+      <TextField fx:id="categoryTextField" layoutX="404.0" layoutY="140.0" onKeyTyped="#categoryChanged" />
+      <Label layoutX="404.0" layoutY="24.0" text="FIlter by Name" />
+      <Label layoutX="404.0" layoutY="107.0" text="Filter by Category" />
+      <Label layoutX="404.0" layoutY="228.0" text="Name: " />
+      <Label layoutX="404.0" layoutY="292.0" text="New side effect: " />
+      <TextField fx:id="nameSDTextField" layoutX="404.0" layoutY="255.0" onKeyTyped="#nameSDChanged" />
+      <TextField fx:id="newSideEffectTextField" layoutX="406.0" layoutY="315.0" />
+      <Button fx:id="updateDBButton" layoutX="453.0" layoutY="355.0" mnemonicParsing="false" onAction="#buttonPressed" text="Update" />
+   </children>
+</AnchorPane>

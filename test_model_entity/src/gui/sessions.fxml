@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="sessionsTable" prefHeight="200.0" prefWidth="420.0">
+        <columns>
+          <TableColumn fx:id="startTimeColumn" prefWidth="75.0" text="Start_time" />
+          <TableColumn fx:id="endTimeColumn" prefWidth="75.0" text="End_time" />
+            <TableColumn fx:id="nameColumn" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="intensityColumn" prefWidth="75.0" text="Intensity" />
+            <TableColumn fx:id="descriptionColumn" prefWidth="119.0" text="Description" />
+        </columns>
+      </TableView>
+      <ListView fx:id="listView" layoutY="200.0" prefHeight="200.0" prefWidth="420.0" />
+      <Label layoutX="435.0" layoutY="14.0" text="Intensity Filter" />
+      <TextField fx:id="intensityTextField" layoutX="435.0" layoutY="38.0" onKeyTyped="#intensityChanged" promptText="- type intensity -" />
+      <Label layoutX="472.0" layoutY="92.0" text="Interval filter" />
+      <Label layoutX="435.0" layoutY="126.0" text="Start_time" />
+      <Label layoutX="435.0" layoutY="189.0" text="Description" />
+      <TextField fx:id="startTimeTextField" layoutX="435.0" layoutY="152.0" />
+      <Button fx:id="filterButton" layoutX="484.0" layoutY="361.0" mnemonicParsing="false" onAction="#filterButtonPressed" text="Filter" />
+      <TextArea fx:id="descriptionTextArea" layoutX="436.0" layoutY="216.0" prefHeight="136.0" prefWidth="149.0" />
+      <Label layoutX="314.0" layoutY="365.0" text="Total hours:" />
+      <Label fx:id="totalHoursLabel" layoutX="383.0" layoutY="365.0" text="0" />
+   </children>
+</AnchorPane>
