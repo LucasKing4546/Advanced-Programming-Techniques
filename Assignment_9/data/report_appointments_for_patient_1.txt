@@ -1,0 +1,3 @@
+Appointments for Patient: Ion Popescu
+Appointment: ID: 1, Patient ID: 1, Date: 2025-10-23, Time: 10:00:00
+Appointment: ID: 4, Patient ID: 1, Date: 2025-10-25, Time: 14:00:00

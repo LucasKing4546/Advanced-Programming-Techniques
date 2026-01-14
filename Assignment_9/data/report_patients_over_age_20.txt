@@ -1,0 +1,6 @@
+Patients Over Age 20
+ID: 1 | Name: Ion Popescu | Age: 45
+ID: 2 | Name: Maria Ionescu | Age: 50
+ID: 3 | Name: Andrei Dumitru | Age: 30
+ID: 4 | Name: Elena Popa | Age: 23
+ID: 5 | Name: Mihai Constantinescu | Age: 30

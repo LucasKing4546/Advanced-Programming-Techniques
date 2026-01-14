@@ -1,0 +1,4 @@
+Appointment Count Per Patient
+Patient: Maria Ionescu | Appointment Count: 1
+Patient: Andrei Dumitru | Appointment Count: 1
+Patient: Elena Po | Appointment Count: 1

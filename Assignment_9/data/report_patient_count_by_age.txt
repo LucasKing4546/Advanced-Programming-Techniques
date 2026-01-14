@@ -1,0 +1,4 @@
+Patient Count By Age
+Age: 23 | Patient Count: 1
+Age: 30 | Patient Count: 3
+Age: 50 | Patient Count: 1
