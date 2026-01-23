@@ -24,10 +24,8 @@ public class SocialNetworkApp extends Application {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/UserWindow.fxml"));
 
-            // Load the FXML first (Controller is created automatically)
             Scene scene = new Scene(loader.load());
 
-            // Get the controller and inject dependencies
             Controller ctrl = loader.getController();
             ctrl.setService(service, user);
 

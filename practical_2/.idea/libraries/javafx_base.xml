@@ -1,0 +1,19 @@
+<component name="libraryTable">
+  <library name="javafx.base">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/json-20250517.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../../../JavaFX/sqlite-jdbc-3.50.3.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -4,9 +4,11 @@ import domain.Post;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseEvent;
 import service.SocialNetworkService;
 import service.SocialObserver;
 
@@ -18,46 +20,40 @@ public class Controller implements SocialObserver {
     private SocialNetworkService service;
     private String userName;
 
-    // --- UI Components ---
     @FXML private ListView<Post> feedList;
     @FXML private ListView<Post> myPostsList;
     @FXML private ListView<String> subsList;
 
     @FXML private TextField postTextField;
     @FXML private TextField searchTopicField;
+    @FXML private TextArea postText;
     @FXML private ListView<String> searchResultList;
+    @FXML private Button updateButton;
 
-    // --- Data Models ---
     private final ObservableList<Post> feedData = FXCollections.observableArrayList();
     private final ObservableList<Post> myPostsData = FXCollections.observableArrayList();
     private final ObservableList<String> subsData = FXCollections.observableArrayList();
     private final ObservableList<String> searchData = FXCollections.observableArrayList();
+    private Post selectedPost;
 
-    // NO CONSTRUCTOR NEEDED
 
     @FXML
     public void initialize() {
-        // 1. Bind UI to Data
         feedList.setItems(feedData);
         myPostsList.setItems(myPostsData);
         subsList.setItems(subsData);
         searchResultList.setItems(searchData);
     }
 
-    // --- Dependency Injection ---
-    // Call this from your Main class immediately after loading FXML
     public void setService(SocialNetworkService service, String userName) {
         this.service = service;
         this.userName = userName;
 
-        // 1. Register as Observer
         this.service.attach(this);
 
-        // 2. Load Initial Data
         refreshAll();
     }
 
-    // --- Handlers ---
 
     @FXML
     public void handlePublishPost() {
@@ -88,6 +84,22 @@ public class Controller implements SocialObserver {
             searchData.clear();
         }
     }
+
+    @FXML
+    void handleUpdate(ActionEvent event) {
+        try {
+            service.updatePost(selectedPost, postText.getText());
+            postText.clear();
+            refreshMyPostsHelper();
+        } catch (Exception e) { showError(e.getMessage()); }
+    }
+
+    @FXML
+    void handleSelect(MouseEvent event) {
+        selectedPost = myPostsList.getSelectionModel().getSelectedItem();
+        postText.setText(selectedPost.getText());
+    }
+
 
     // --- Observer Implementation ---
 

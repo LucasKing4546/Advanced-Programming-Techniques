@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.StaffController">
+    <top>
+        <VBox spacing="5" style="-fx-background-color: #ddd;">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label text="Hotel Staff Dashboard">
+                <font><Font name="System Bold" size="18.0" /></font>
+            </Label>
+            <Label fx:id="revenueLabel" text="Total Revenue: $0">
+                <font><Font size="16.0" /></font>
+            </Label>
+        </VBox>
+    </top>
+    <center>
+        <VBox spacing="5">
+            <padding><Insets top="10" right="10" bottom="10" left="10"/></padding>
+            <Label text="Current Bookings (Select room to filter)" />
+            <ListView fx:id="bookingList" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </center>
+</BorderPane>
